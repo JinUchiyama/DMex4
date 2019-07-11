@@ -15,8 +15,8 @@ public class Dicegame{
 		}
 		System.out.println("Total value: "+(v[0]+v[1]));
 		if((v[0]+v[1])>7)
-			System.out.println("You won");
+			System.out.println(name+" won!");
 		else
-			System.out.println("You lost");
+			System.out.println(name+" lost!");
 	}
 }
