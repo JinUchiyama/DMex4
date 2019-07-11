@@ -8,15 +8,22 @@ public class Dicegame{
 		System.out.println("Hello, "+name+"!");
 		Random r = new Random();
 		int v[] = new int[2];
-		System.out.println("Rolling the dice...");
-		for(int i=0;i<2;i++) {
-			v[i]=r.nextInt(6)+1;
-			System.out.println("Die "+(i+1)+": "+v[i]);
+		int count=0;
+		while(true){
+			System.out.println("Rolling the dice...");
+			for(int i=0;i<2;i++) {
+				v[i]=r.nextInt(6)+1;
+				System.out.println("Die "+(i+1)+": "+v[i]);
+			}
+			System.out.println("Total value: "+(v[0]+v[1]));
+			count++;
+			if((v[0]+v[1])>7) {
+				System.out.println(name+" won!");
+				break;
+			}
+			else
+				System.out.println(name+" lost!");
+			}
+		System.out.println("count: "+count);
 		}
-		System.out.println("Total value: "+(v[0]+v[1]));
-		if((v[0]+v[1])>7)
-			System.out.println(name+" won!");
-		else
-			System.out.println(name+" lost!");
-	}
 }
