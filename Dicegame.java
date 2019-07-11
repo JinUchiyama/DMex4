@@ -9,5 +9,9 @@ public class Dicegame{
 			System.out.println("Die "+(i+1)+": "+v[i]);
 		}
 		System.out.println("Total value: "+(v[0]+v[1]));
+		if((v[0]+v[1])>7)
+			System.out.println("You won");
+		else
+			System.out.println("You lost");
 	}
 }
